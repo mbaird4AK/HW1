@@ -10,31 +10,67 @@ using std::endl;
 
 int main()
 {
-	int x, y, i = 0, j = 0;
+	int width, length, blank, i = 0, j = 0;
 
 	cout << "Type a positive integer for width:\n";
-	cin >> x;
+	cin >> width;
 	cout << "You typed:";
-	cout << x;
+	cout << width;
 
-	while (x<1)
+	while (width<1)
 	{
 		cout << "\nError: Not a positive integer\nTry again\n";
 		cout << "Type a positive integer for width:\n";
-		cin >> x;
+		cin >> width;
 		cout << "You typed:";
-		cout << x;
+		cout << width;
 	}
 
-	while (j < y)
+	cout << "\n";
+
+	length = width*2-1;
+	blank = width - 1;
+
+
+	while (j < length)
 	{
-		while (i < x)
+		while (i < blank)
+		{
+			cout << " ";
+			i++;
+		}
+		while (i < width)
 		{
 			cout << "*";
 			i++;
 		}
-		cout << "\n";
+		
+		if (i = width)
+		{	
+			
+			while (i > blank+1)
+			{
+				cout << "*";
+				i--;
+			}
+			
+			while (i < blank-i)
+			{
+				cout << " ";
+				i++;
+			}
+			
+		
 
+			blank--;
+		}
+		else
+		{
+			cout << "else";
+			blank++;
+		}
+
+		cout << "\n";
 		j++;
 		i = 0;
 	}
