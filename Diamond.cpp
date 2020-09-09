@@ -28,7 +28,7 @@ int main()
 
 	cout << "\n";
 
-	length = width*2-1;
+	length = width;
 	blank = width - 1;
 
 
@@ -64,17 +64,53 @@ int main()
 
 			blank--;
 		}
-		else
-		{
-			cout << "else";
-			blank++;
-		}
+		
 
 		cout << "\n";
 		j++;
 		i = 0;
 	}
 
+	j = 1;
+
+	while (j < length)
+	{
+		while (i < blank+2)
+		{
+			cout << " ";
+			i++;
+		}
+		while (i < width-1)
+		{
+			cout << "*";
+			i++;
+		}
+
+		if (i = width)
+		{
+
+			while (i > blank+2)
+			{
+				cout << "*";
+				i--;
+			}
+
+			while (i < blank - 1)
+			{
+				cout << " ";
+				i++;
+			}
+
+
+
+			blank++;
+		}
+		
+
+		cout << "\n";
+		j++;
+		i = 0;
+	}
 
 
 
