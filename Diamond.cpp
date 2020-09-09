@@ -13,19 +13,19 @@ int main()
 	int width, length, blank, i = 0, j = 0;
 
 	cout << "Type a positive integer for width:\n";
-	cin >> width;
+	while (!(cin>>width) || (width <= 0))
+		{
+			cout << "\nError: Not a positive integer\nTry again\n";
+			cout << "Type a positive integer for width:\n";
+			cin.clear();
+			cin.ignore(123, '\n');
+		}
 	cout << "You typed:";
 	cout << width;
 
-	while (width<1)
-	{
-		cout << "\nError: Not a positive integer\nTry again\n";
-		cout << "Type a positive integer for width:\n";
-		cin >> width;
-		cout << "You typed:";
-		cout << width;
-	}
-
+	
+		
+	
 	cout << "\n";
 
 	length = width;
